@@ -15,3 +15,9 @@ department to finalize the employee performance mapping. As a DBA, you should fi
 employees and ensure that all jobs are meeting the organization's profile standard. You also need to calculate
 bonuses to find extra cost for expenses. This will raise the overall performance of the organization by ensuring
 that all required employees receive training.
+
+
+#An ER diagram for the given employee database.
+
+![image](https://github.com/user-attachments/assets/53714bea-a51c-46c9-96b2-bf1f522b706c)
+
