@@ -96,6 +96,26 @@ where EXP > 3;
 
 exec get_exp_emp;
 
+/*Create an index to improve the cost and performance of the query to find the employee
+whose FIRST_NAME is ‘Eric’ in the employee table after checking the execution plan.*/
+
+create nonclustered index names on emp_record_table(first_name);
+
+select * from emp_record_table where FIRST_NAME = 'Eric';
+
+/*Write a query to calculate the bonus for all the employees, based on their ratings and salaries (Use the formula: 5% of salary * employee rating).*/
+
+select  EMP_ID,FIRST_NAME,LAST_NAME,SALARY,SALARY*0.05*EMP_RATING as bonus
+from emp_record_table;
+
+/*Write a query to calculate the average salary distribution based on the continent and country. Take data from the employee record table.*/
+
+select CONTINENT,COUNTRY,cast(avg(salary) as decimal(10,2)) as avg_salary
+from emp_record_table
+group by CONTINENT,COUNTRY;
+
+
+
 
 
 
